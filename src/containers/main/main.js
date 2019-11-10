@@ -8,7 +8,6 @@ import "./main.css";
 
 class Main extends Component {
   render() {
-    console.log(this.props.events);
     return (
       <div className="main">
         <h1>Events We Host</h1>
@@ -18,11 +17,6 @@ class Main extends Component {
     );
   }
 }
-
-// const mapDispatchToProps = {
-//   onAdd: postEventData,
-//   // authFailAction: authFail,
-// };
 
 const mapStateToProps = state => ({
   events: state.postEventData.events,

@@ -1,1 +1,2 @@
 export const POST_EVENT_DATA = 'POST_EVENT_DATA';
+export const GET_EVENT_DATA = 'GET_EVENT_DATA';

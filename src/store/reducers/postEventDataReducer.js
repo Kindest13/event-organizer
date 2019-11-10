@@ -1,6 +1,5 @@
 import {
-  POST_EVENT_DATA,
-  ADD_EVENT_FAIL
+  POST_EVENT_DATA
 } from '../actions/types';
 
 const initialState = {
