@@ -1,0 +1,40 @@
+.event {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 800px;
+  height: 120px;
+  padding: 0.5rem;
+  background-color: #00eeff;
+  font-size: 1rem;
+}
+
+.event:hover {
+  background: #11bbc7;
+}
+
+.event header, .event footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event header div {
+  display: flex;
+  flex-direction: column;
+}
+
+.event address span {
+  padding-right: 0.3rem;
+}
+
+.event body {
+  text-align: center;
+}
+
+.event body .title {
+  text-align: center;
+  display: inline;
+  font-size: 2rem;
+}
