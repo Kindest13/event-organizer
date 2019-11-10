@@ -1,2 +1,1 @@
 export const POST_EVENT_DATA = 'POST_EVENT_DATA';
-export const ADD_EVENT_FAIL = 'ADD_EVENT_FAIL';

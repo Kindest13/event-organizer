@@ -91,7 +91,6 @@ class EventCreator extends Component {
   onPositiveInput = (event) => /[+-]$/.test(event.key) && event.preventDefault();
 
   render() {
-    // console.log(new Date(this.state.eventData.start).toString().match(/.+?(?=\sGMT)/g));
     return (
       <div className="eventCreator">
         <h1>Please Fill In To Create Your Event</h1>

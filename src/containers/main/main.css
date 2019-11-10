@@ -5,10 +5,14 @@
   font-size: 1.2rem;
 }
 
+.main h1 {
+  font-size: 3rem;
+}
+
 .main .btn.btn-link {
   background-color: #ff0000;
   color: #ffffff;
-  padding: 1em 1.5em;
+  padding: 1rem 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -20,4 +24,16 @@
 
 .main .btn.btn-link:active {
   transform: translateY(0.3rem);
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    font-size: 1rem;
+  }
+  .main h1 {
+    font-size: 2rem;
+  }
+  .main .btn.btn-link {
+    padding: 0.5rem 1rem;
+  }
 }

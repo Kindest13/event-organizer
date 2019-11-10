@@ -7,11 +7,6 @@ import Events from '../../components/events/events';
 import "./main.css";
 
 class Main extends Component {
-
-  createEvent = () => {
-
-  }
-
   render() {
     console.log(this.props.events);
     return (
