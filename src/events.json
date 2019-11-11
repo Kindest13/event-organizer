@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "title": "Our Planet",
+      "attendees": "110",
+      "street": "Street 123",
+      "city": "Peenda",
+      "country": "Uganda",
+      "end": "2019-11-19T14:11",
+      "start": "2019-11-19T11:11",
+      "type": "public",
+      "extra": {
+        "medic": true,
+        "security": true,
+        "approval": true
+      }
+    },
+    {
+      "title": "Our Planet",
+      "attendees": "110",
+      "street": "Street 123",
+      "city": "Peenda",
+      "country": "Uganda",
+      "end": "2019-11-19T14:11",
+      "start": "2019-11-19T11:11",
+      "type": "public",
+      "extra": {
+        "medic": true,
+        "security": true,
+        "approval": true
+      }
+    },
+    {
+      "title": "Our Planet",
+      "attendees": "110",
+      "street": "Street 123",
+      "city": "Peenda",
+      "country": "Uganda",
+      "end": "2019-11-19T14:11",
+      "start": "2019-11-19T11:11",
+      "type": "public",
+      "extra": {
+        "medic": true,
+        "security": true,
+        "approval": true
+      }
+    },
+    {
+      "title": "Our Planet",
+      "attendees": "110",
+      "street": "Street 123",
+      "city": "Peenda",
+      "country": "Uganda",
+      "end": "2019-11-19T14:11",
+      "start": "2019-11-19T11:11",
+      "type": "public",
+      "extra": {
+        "medic": true,
+        "security": true,
+        "approval": true
+      }
+    }
+  ]
+}

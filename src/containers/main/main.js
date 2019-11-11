@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import axios from 'axios';
 import { getEventsData } from '../../store/actions/getEventsAction';
 import Events from '../../components/events/events';
 import Filter from '../../components/filter/filter';
+import stubEvents from '../../events.json';
 import Sort from '../../components/sort/sort';
 
 import "./main.css";
@@ -14,11 +14,12 @@ class Main extends Component {
   state = {
     filteredEvents: null
   }
-  // componentDidMount() {
-  //   const { getEventsData } = this.props;
-  //   axios.get(`http://localhost:8080/`)
-  //     .then(response => getEventsData(response.data.events));
-  // }
+  componentDidMount() {
+    const { getEventsData } = this.props;
+    if(!this.props.isLoaded) {
+      getEventsData(stubEvents);
+    }
+  }
 
   onSortByChange = ({ target: { value } }) => {
     const events = JSON.parse(JSON.stringify(this.state.filteredEvents));
@@ -76,7 +77,8 @@ class Main extends Component {
 
 
 const mapStateToProps = state => ({
-  events: state.postEventData.events,
+  events: state.eventData.events,
+  isLoaded: state.eventData.isLoaded
 });
 
 export default connect(mapStateToProps, {

@@ -39,9 +39,16 @@ textInput.propTypes = {
     min: PropTypes.oneOfType([PropTypes.number, PropTypes.instanceOf(Date)]),
     label: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-}).isRequired,
+  }).isRequired,
   positiveNumber: PropTypes.func,
-  onInputChange: PropTypes.func.isRequired
+  onInputChange: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    eventData: PropTypes.shape({
+      start: PropTypes.string,
+      end: PropTypes.string
+    }).isRequired
+  }).isRequired,
+  validDate: PropTypes.bool
 };
 
 export default textInput;

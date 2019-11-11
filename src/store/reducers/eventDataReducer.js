@@ -1,9 +1,11 @@
 import {
-  POST_EVENT_DATA
+  POST_EVENT_DATA,
+  GET_EVENT_DATA
 } from '../actions/types';
 
 const initialState = {
-  events: []
+  events: [],
+  isLoaded: false
 };
 
 export default function (state = initialState, action) {
@@ -13,6 +15,14 @@ export default function (state = initialState, action) {
       return {
         ...state,
         events: [...state.events, newEvent]
+      };
+    }
+    case GET_EVENT_DATA: {
+      const events = action.payload;
+      return {
+        ...state,
+        ...events,
+        isLoaded: true
       };
     }
     default:

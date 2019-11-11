@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './event.css';
 
 const event = ({ info: { street, city, country, title, attendees, type, start, end } }) => {
@@ -33,5 +34,18 @@ const event = ({ info: { street, city, country, title, attendees, type, start, e
     </div>
   );
 }
+
+event.propTypes = {
+  info: PropTypes.shape({
+    street: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    attendees: PropTypes.string.isRequired,
+    start: PropTypes.string.isRequired,
+    end: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default event;

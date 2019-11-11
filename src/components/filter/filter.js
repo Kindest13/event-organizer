@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 import './filter.css';
 
@@ -22,5 +22,9 @@ const filter = ({ onSelect }) => (
     </select>
   </div>
 );
+
+filter.propTypes = {
+  onChange: PropTypes.func,
+};
 
 export default filter;

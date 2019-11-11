@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Form from '../../components/form/form';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -107,6 +106,7 @@ class EventCreator extends Component {
   onPositiveInput = (event) => /[+-]$/.test(event.key) && event.preventDefault();
 
   render() {
+    console.log(this.state.eventData);
     return (
       <div className="eventCreator">
         <h1>Please Fill In To Create Your Event</h1>
@@ -125,12 +125,6 @@ class EventCreator extends Component {
 
 const mapDispatchToProps = {
   onAdd: postEventData,
-  // authFailAction: authFail,
 };
-
-// const mapStateToProps = state => ({
-//   loading: state.authStatus.loading,
-//   error: state.authStatus.error,
-// });
 
 export default connect(null, mapDispatchToProps)(withRouter(EventCreator));;

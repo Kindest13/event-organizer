@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 app.get('/', events.getEvents);
-// routes(app);
+routes(app);
 
 app.listen(8080, () => {
   console.log('server is running on 8080');

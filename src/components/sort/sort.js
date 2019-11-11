@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 import './sort.css';
 
@@ -15,5 +15,9 @@ const sort = ({ onChange }) => (
     </label>
   </div>
 );
+
+sort.propTypes = {
+  onChange: PropTypes.func.isRequired,
+};
 
 export default sort;

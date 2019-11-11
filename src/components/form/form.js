@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 import TextInput from './textInput/textInput';
 import RadioInput from './radioInput/radioInput';
@@ -21,6 +21,16 @@ const form = ({
         disabled={!data.submit}>Create</button>
     </form>
   );
-}
+};
+
+form.propTypes = {
+  text: PropTypes.instanceOf(Object),
+  radio: PropTypes.instanceOf(Object),
+  checkbox: PropTypes.instanceOf(Object),
+  positiveNumber: PropTypes.func,
+  data: PropTypes.instanceOf(Object),
+  onInputChange: PropTypes.func.isRequired,
+  onAddEvent: PropTypes.func.isRequired,
+};
 
 export default form;

@@ -28,9 +28,9 @@ radioInput.propTypes = {
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-}).isRequired,
-onInputChange: PropTypes.func.isRequired,
-eventType: PropTypes.string.isRequired,
+  }).isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  eventType: PropTypes.string.isRequired,
 };
 
 export default radioInput;

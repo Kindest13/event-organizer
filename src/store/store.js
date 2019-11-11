@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import postEventDataReducer from './reducers/postEventDataReducer';
+import eventDataReducer from './reducers/eventDataReducer';
 
 
 const initialState = {};
@@ -12,7 +12,7 @@ const enhancers = [applyMiddleware(...middleware)];
 
 const composedEnhancers = composeWithDevTools(...enhancers);
 const reducers = combineReducers({
-  postEventData: postEventDataReducer
+  eventData: eventDataReducer
 });
 
 const store = createStore(

@@ -1,5 +1,6 @@
 import React from 'react';
 import Event from './event/event';
+import PropTypes from 'prop-types';
 import './events.css';
 
 const events = ({ events, filtered }) => {
@@ -19,6 +20,11 @@ const events = ({ events, filtered }) => {
         ))}
     </ul>
   );
+};
+
+events.propTypes = {
+  filtered: PropTypes.instanceOf(Object),
+  events: PropTypes.instanceOf(Object),
 };
 
 export default events;
