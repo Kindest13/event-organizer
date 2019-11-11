@@ -5,6 +5,11 @@
   font-size: 1.2rem;
 }
 
+.main .buttons {
+  display: flex;
+  flex-direction: row;
+}
+
 .main h1 {
   font-size: 3rem;
 }
@@ -12,7 +17,7 @@
 .main .btn.btn-link {
   background-color: #ff0000;
   color: #ffffff;
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -34,6 +39,9 @@
     font-size: 2rem;
   }
   .main .btn.btn-link {
-    padding: 0.5rem 1rem;
+    padding: 1rem 0.5rem;
+  }
+  .main .buttons {
+    flex-direction: column;
   }
 }

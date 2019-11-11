@@ -1,6 +1,6 @@
-const events = require('../controllers');
+const events = require('../controllers/events');
 
-export default (app) => {
-  app.get('/', events.getEvents);
-  app.post('/addEvent', effects.putEvent);
+module.exports = (app) => {
+  app.get('/', (req, res) => res.send('hello'));
+  app.post('/addEvent', () => console.log("get /addEvent"));
 };

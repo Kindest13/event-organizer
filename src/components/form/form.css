@@ -11,8 +11,24 @@
   background-color: #f5f5f5;
 }
 
+.createNewEventForm .field input[type="text"],
+.createNewEventForm .field input[type="number"] {
+  text-indent: 0.5rem;
+}
+
+.createNewEventForm .formField input.valid {
+  border: none;
+}
+
+
+.createNewEventForm label.invalid::after {
+  font-size: 0.8rem;
+  content: "end date must be bigger than start date";
+  color: #ff0000;
+}
+
 .createNewEventForm button[type='submit'] {
-  background-color: #4CAF50;
+  background-color: #1bb620;
   border: none;
   color: #ffffff;
   padding: 0.5rem 2rem;

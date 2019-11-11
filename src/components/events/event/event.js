@@ -13,13 +13,13 @@ const event = ({ info: { street, city, country, title, attendees, type, start, e
           <span className="people">{attendees} People</span>
         </div>
         <div>
-          <span className="start">Start At: {getDate(start)}</span>
+          <span className="start">Start: {getDate(start)}</span>
           <span className="hours">Time Length: {getMinutes(start, end)} minutes</span>
         </div>
       </header>
-      <body>
+      <main>
         <h3 className="title">{title}</h3>
-      </body>
+      </main>
       <footer>
         <div>
           <span className="status">{checkStatus(start)}</span>

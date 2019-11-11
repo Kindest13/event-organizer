@@ -25,12 +25,24 @@ class EventCreator extends Component {
         approval: true
       }
     },
-    submit: false
+    submit: false,
+    validDate: true
+  }
+
+  dateCheck = (startDate, endDate) => {
+    let valid = this.state.validDate;
+    if(new Date(startDate) >= new Date(endDate)) {
+      valid = false
+    } else {
+      valid = true;
+    }
+    return valid;
   }
 
   onSumbitCheckRequiredFields = (eventData) => {
-    const fulfilled = Object.values(eventData).every(value => value);
-    this.setState({submit: fulfilled});
+    const { start, end } = eventData;
+    const fulfilled = Object.values(eventData).every(value => value) && this.dateCheck(start, end);
+    this.setState({submit: fulfilled, validDate: this.dateCheck(start, end)});
   }
 
   extraWeekday = (eventData) => {
@@ -51,6 +63,10 @@ class EventCreator extends Component {
   onInputChange = ({ target: { name, value } }) => {
     const { eventData } = { eventData: { ...this.state.eventData, extra: {...this.state.eventData.extra } } };
     eventData[name] = value;
+
+    if(name === 'start') {
+      eventData.end = eventData.start;
+    }
 
     if(eventData.type === 'public') {
       eventData.extra.security = true;
@@ -99,10 +115,9 @@ class EventCreator extends Component {
           checkbox={checkboxFieldInfo}
           radio={radioFieldInfo}
           positiveNumber={this.onPositiveInput}
-          eventData={this.state.eventData}
+          data={this.state}
           onInputChange={this.onInputChange}
-          onAddEvent={this.onEventCreate}
-          submit={this.state.submit} />
+          onAddEvent={this.onEventCreate} />
       </div>
     );
   }
