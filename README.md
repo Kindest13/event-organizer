@@ -5,7 +5,7 @@ It's just a simple react event app. It represents events as blocks with info. Yo
 
 Clone this repository to your local machine.
 ##### clone repository
-`$ git clone https://github.com/Kindest13/EasyReposSelector.git`
+`$ git clone https://github.com/Kindest13/event-organizer.git`
 
 Go to the local copy of repository. Open terminal and run the following command
 ##### install all dependencies defined in package.json
