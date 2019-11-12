@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   getEvents: (req, res) => {
     let events;
-    fs.readFile(path.resolve(__dirname, '../../events.json'), (err, data) => {
+    fs.readFile(path.resolve(__dirname, '../events.json'), (err, data) => {
       if (err) throw err;
       events = JSON.parse(data);
       console.log(events);

@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "title": "Our Planet",
+      "attendees": "110",
+      "street": "Street 123",
+      "city": "Peenda",
+      "country": "Uganda",
+      "end": "2019-11-19T14:11",
+      "start": "2019-11-19T11:11",
+      "type": "public",
+      "extra": {
+        "medic": true,
+        "security": true,
+        "approval": true
+      }
+    },
+    {
+      "title": "Apple",
+      "attendees": "25",
+      "street": "Reeba 77",
+      "city": "Opal",
+      "country": "Uruguay",
+      "end": "2019-12-19T14:11",
+      "start": "2019-12-19T12:11",
+      "type": "private",
+      "extra": {
+        "medic": false,
+        "security": true,
+        "approval": true
+      }
+    },
+    {
+      "title": "Beautiful Day",
+      "attendees": "30",
+      "street": "Weal 1",
+      "city": "Hamburg",
+      "country": "Germany",
+      "end": "2019-11-02T03:11",
+      "start": "2019-11-02T05:11",
+      "type": "private",
+      "extra": {
+        "medic": false,
+        "security": true,
+        "approval": false
+      }
+    },
+    {
+      "title": "Yamaki",
+      "attendees": "60",
+      "street": "Unoi 33",
+      "city": "Fau",
+      "country": "China",
+      "end": "2019-08-19T14:11",
+      "start": "2019-08-19T11:11",
+      "type": "private",
+      "extra": {
+        "medic": false,
+        "security": true,
+        "approval": true
+      }
+    }
+  ]
+}
