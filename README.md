@@ -1,5 +1,6 @@
 # event-organizer
-It's just a simple react event app. It represents events as blocks with info. You can create an event by pressing red button "Create your own event", you'll be redirected to the creation form page(be aware all fields are required, end date can't be same or smaller than start date).
+It's just a simple event-organizer app. The main page represents events as blocks with info. You can create an event by pressing red  "Create your own event" button, you'll be redirected to the creation form page(be aware all fields are required, end date can't be same or smaller than start date). Basically I was trying to not use libraries, so I've used just react with redux.(Mostly redux just to show the ability of using this technology, so go easy on me :)). The service stubs function invoke is commented in Main container.
+Also there is a server folder but its just for me its not provided.
 
 ## Getting Started
 
