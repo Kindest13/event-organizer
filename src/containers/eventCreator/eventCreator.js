@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from '../../components/form/form';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import axios from 'axios';
 import { textFieldsInfo, checkboxFieldInfo, radioFieldInfo } from '../../helpers/constants';
 import { postEventData } from '../../store/actions/addEventAction';
 
@@ -97,16 +98,29 @@ class EventCreator extends Component {
   };
 
   onEventCreate = (event) => {
+    event.preventDefault();
     const { history, onAdd } = this.props;
     const data = this.state.eventData;
-    event.preventDefault();
+
+    // Invoke for ordering services
+    // this.stubsForServices(data.extra);
+
     onAdd(data, history);
   };
+
+  stubsForServices = (services) => {
+    for(let service in services) {
+      if(services[service]) {
+        axios.get(`/${service}`)
+          .then(response => console.log(response.data))
+          .catch(error => console.log(error));
+      }
+    }
+  }
 
   onPositiveInput = (event) => /[+-]$/.test(event.key) && event.preventDefault();
 
   render() {
-    console.log(this.state.eventData);
     return (
       <div className="eventCreator">
         <h1>Please Fill In To Create Your Event</h1>

@@ -5,13 +5,9 @@ export const postData = (event) => ({
   payload: event
 });
 
-export const postEventData = (newEvent, history) => async (dispatch) => {
-  // Maybe need to create server api to write in json
-    // events.push()
+export const postEventData = (newEvent, history) => (dispatch) => {
     dispatch(postData(newEvent));
     history.push('/');
-    console.log("postEventData");
-    // console.log(events);
 };
 
 export default postEventData;

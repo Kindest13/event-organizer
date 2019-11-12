@@ -5,7 +5,4 @@ export const getData = (events) => ({
   payload: events
 });
 
-export const getEventsData = (events) => async (dispatch) => {
-  console.log("getEventData", events);
-  dispatch(getData(events));
-};
+export const getEventsData = (events) => (dispatch) => dispatch(getData(events));
